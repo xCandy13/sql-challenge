@@ -10,7 +10,8 @@ CREATE TABLE departments (
 );
 
 -- View table columns and datatypes
-SELECT * FROM dept_manager;
+SELECT * FROM departments;
+
 
 -- titles.csv
 -- Drop table if exists
@@ -26,8 +27,6 @@ CREATE TABLE titles (
 -- View table columns and datatypes
 SELECT * FROM titles;
 
--- View table columns and datatypes
-SELECT * FROM departments;
 
 -- employees.csv
 -- Drop table if exists
@@ -46,9 +45,9 @@ CREATE TABLE employees (
 	FOREIGN KEY (emp_title) REFERENCES titles (emp_title)
 );
 
-
 -- View table columns and datatypes
 SELECT * FROM employees;
+
 
 -- dept_emp.csv
 -- Drop table if exists
@@ -65,6 +64,7 @@ CREATE TABLE dept_emp (
 -- View table columns and datatypes
 SELECT * FROM dept_emp;
 
+
 -- dept_manager.csv
 -- Drop table if exists
 DROP TABLE IF EXISTS dept_manager;
@@ -76,6 +76,10 @@ CREATE TABLE dept_manager (
     FOREIGN KEY (dept_no) REFERENCES departments (dept_no),
     FOREIGN KEY (emp_no) REFERENCES employees (emp_no)
 );
+
+-- View table columns and datatypes
+SELECT * FROM dept_manager;
+
 
 -- salaries.csv
 -- Drop table if exists
